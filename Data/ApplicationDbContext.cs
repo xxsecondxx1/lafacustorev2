@@ -9,5 +9,6 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     {}
         public DbSet<lafacustorev2.Models.Contacto> DataContacto {get; set; }
+        public DbSet<lafacustorev2.Models.Producto> DataProducto {get; set; }
     
 }
