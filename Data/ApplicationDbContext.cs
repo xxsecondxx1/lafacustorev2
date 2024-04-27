@@ -7,6 +7,7 @@ public class ApplicationDbContext : IdentityDbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
         : base(options)
-    {
-    }
+    {}
+        public DbSet<lafacustorev2.Models.Contacto> DataContacto {get; set; }
+    
 }
