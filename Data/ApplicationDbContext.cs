@@ -10,5 +10,6 @@ public class ApplicationDbContext : IdentityDbContext
     {}
         public DbSet<lafacustorev2.Models.Contacto> DataContacto {get; set; }
         public DbSet<lafacustorev2.Models.Producto> DataProducto {get; set; }
+        public DbSet<lafacustorev2.Models.Proforma> DataItemCarrito {get; set; }
     
 }
