@@ -1,17 +1,17 @@
 @model lafacustorev2.Models.Producto
 
 @{
-    ViewData["Title"] = "Detalles del Producto";
+    ViewData["Title"] = "Ultimo Producto de la Sesion";
 }
 
-    <h1>Details</h1>
+    <h1>>@ViewData["Title"]</h1>
     <div class="container">
             <div class="col-sm-4">
               <div class="card mb-3">
                 <div class="card-body">
                   <div class="card-img-actions">
                     <img class="img-responsive" width="96" height="150"
-                       src="@Html.DisplayFor(model => model.ImageURL)"  />
+                      src="@Html.DisplayFor(model => model.ImageURL)"  />
                   </div>
                 </div>
                 <div class="card-body">
