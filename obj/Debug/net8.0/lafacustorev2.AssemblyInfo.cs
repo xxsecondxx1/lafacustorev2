@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("lafacustorev2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+bdc8aff0f10ddd8d806395ce7fc6d5c63e490f45")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+43d04dec88d8682b3d3b91ac3ac5cdc03518ef19")]
 [assembly: System.Reflection.AssemblyProductAttribute("lafacustorev2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("lafacustorev2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
