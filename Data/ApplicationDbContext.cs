@@ -11,5 +11,9 @@ public class ApplicationDbContext : IdentityDbContext
         public DbSet<lafacustorev2.Models.Contacto> DataContacto {get; set; }
         public DbSet<lafacustorev2.Models.Producto> DataProducto {get; set; }
         public DbSet<lafacustorev2.Models.Proforma> DataItemCarrito {get; set; }
+
+        public DbSet<lafacustorev2.Models.Pago> DataPago {get; set; }
+        public DbSet<lafacustorev2.Models.Pedido> DataPedido {get; set; }
+        public DbSet<lafacustorev2.Models.DetallePedido> DataDetallePedido {get; set; }
     
 }
