@@ -17,7 +17,7 @@
                 <div class="card-body">
                   <h5 class="card-title">@Html.DisplayFor(model => model.Name)</h5>
                   <h5 class="card-title">@Html.DisplayFor(model => model.Price)</h5>
-                  <a class="btn btn-primary" asp-action="Add" asp-route-id="@Model.Id">Add</a>
+                  <a class="btn btn-primary" asp-controller="Carrito" asp-action="Add" asp-route-id="@Model.Id">Add</a>
                 </div>
               </div>
             </div>
