@@ -37,6 +37,7 @@ namespace lafacustorev2.Controllers
             productos = productos.Where(l => l.Status.Contains("A"));
             return View(productos.ToList());
         }
+        
         public async Task<IActionResult> Details(int? id){
             Producto objProduct = await _context.DataProducto.FindAsync(id);
             if(objProduct == null){

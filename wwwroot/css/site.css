@@ -20,8 +20,40 @@ html {
 body {
   margin-bottom: 60px;
 }
+/* carrito */
+.nav-item input[type="image"] {
+  width: 75px; 
+  height: auto;
+}
+/* buscador */
+.navbar .large-search-bar {
+  width: 300px; 
+}
+.navbar .form-inline {
+  display: flex;
+  align-items: center;
+}
 
+.navbar .form-control {
+  width: 200px; 
+}
 
+.navbar .btn {
+  margin-left: 5px; 
+}
+
+.custom-navbar {
+  height: 70px; /* Ajusta este valor según tus necesidades */
+}
+
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-item,
+.custom-navbar .nav-link,
+.custom-navbar form {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
 
 
 
