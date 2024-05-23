@@ -4,15 +4,20 @@
 
 <ul class="navbar-nav">
     <li class="nav-item">
-            <form asp-controller="Catalogo" asp-action="Index">
-                                <input type="text" name="searchString"><input type="submit" value="Buscar" />
-            </form>
+    <form class="form-inline" asp-controller="Catalogo" asp-action="Index">
+        <div class="input-group">
+            <input type="text" class="form-control" name="searchString" placeholder="Buscar">
+            <div class="input-group-append"> 
+                 <button class="btn btn-outline-light" type="submit">Buscar</button>
+            </div>
+        </div>
+    </form>
     </li>
 @if (SignInManager.IsSignedIn(User))
 {
-    <li class="nav-item">
+    <li class="nav-item nav-item-centered">
         <form asp-controller="Carrito" asp-action="Index">
-                <input type="submit" value="Carrito" />
+                <input type="image" src="/images/icon_carrito2.png" alt="Carrito" />
         </form>
     </li>
     <li class="nav-item">

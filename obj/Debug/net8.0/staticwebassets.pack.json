@@ -13,6 +13,14 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "D:\\zGrupal\\lafacustorev2\\wwwroot\\images\\icon_carrito.png",
+      "PackagePath": "staticwebassets\\images\\icon_carrito.png"
+    },
+    {
+      "Id": "D:\\zGrupal\\lafacustorev2\\wwwroot\\images\\icon_carrito2.png",
+      "PackagePath": "staticwebassets\\images\\icon_carrito2.png"
+    },
+    {
       "Id": "D:\\zGrupal\\lafacustorev2\\wwwroot\\images\\img1.jpg",
       "PackagePath": "staticwebassets\\images\\img1.jpg"
     },
