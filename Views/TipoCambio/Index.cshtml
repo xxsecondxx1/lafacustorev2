@@ -1,0 +1,59 @@
+@model lafacustorev2.Integration.currencyexchange.dto.TipoCambio
+
+@{
+    ViewData["Title"] = "TipoCambio";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Formulario de Tipo Cambio</h1>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <form asp-controller="TipoCambio" asp-action="Exchange" method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="From" class="control-label">Desde</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-exchange-alt"></i></span>
+                                </div>
+                                <input asp-for="From" class="form-control" placeholder="Moneda origen" />
+                            </div>
+                            <span asp-validation-for="From" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="To" class="control-label">Hasta</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-exchange-alt"></i></span>
+                                </div>
+                                <input asp-for="To" class="form-control" placeholder="Moneda destino" />
+                            </div>
+                            <span asp-validation-for="To" class="text-danger"></span>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label asp-for="Cantidad" class="control-label">Cantidad</label>
+                            <div class="input-group">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fas fa-money-bill"></i></span>
+                                </div>
+                                <input asp-for="Cantidad" class="form-control" placeholder="Cantidad" />
+                            </div>
+                            <span asp-validation-for="Cantidad" class="text-danger"></span>
+                        </div>
+                        <div class="form-group text-center">
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Realizar Cambio</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-4">
+                        <h2>Tipo Cambio: <span class="badge bg-info">@ViewData["rate"]</span></h2>
+                        <h2>Cambio Total: <span class="badge bg-success">@ViewData["cambio"]</span></h2>
+                    </div>
+                    <div class="text-center mt-3">
+                        <a asp-action="Index" class="btn btn-secondary">Regresar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
