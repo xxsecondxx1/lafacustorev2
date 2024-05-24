@@ -7,22 +7,28 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using lafacustorev2.Data;
 using lafacustorev2.Models;
+using lafacustorev2.Service;
 
 namespace lafacustorev2.Controllers
 {
     public class ProductoController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly ProductoService _productoService;
 
-        public ProductoController(ApplicationDbContext context)
+        public ProductoController(ApplicationDbContext context, ProductoService productoService)
         {
             _context = context;
+            _productoService = productoService;
         }
 
         // GET: Producto
         public async Task<IActionResult> Index()
         {
-            return View(await _context.DataProducto.ToListAsync());
+            var productos = await _productoService.GetAll();
+            return productos != null ?
+                        View(productos) :
+                        Problem("Entity set 'ApplicationDbContext.DataProductos'  is null.");
         }
 
         // GET: Producto/Details/5
