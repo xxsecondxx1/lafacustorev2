@@ -13,5 +13,7 @@ namespace lafacustorev2.Models
         public string? Email { get; set; }
         public string? Message { get; set; }
         public string? Category { get; set; }
+        public string? Sentimiento { get; set; }
+
     }
 }
