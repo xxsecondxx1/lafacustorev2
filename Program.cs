@@ -5,8 +5,15 @@ using Npgsql.EntityFrameworkCore.PostgreSQL;
 using Microsoft.OpenApi.Models;
 using lafacustorev2.Service;
 using lafacustorev2.Integration.currencyexchange;
+using Microsoft.Extensions.ML;
+using SentimentAnalysis;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddPredictionEnginePool<MLModel1.ModelInput, MLModel1.ModelOutput>()
+    .FromFile("MLModel1.mlnet");
+builder.Services.AddControllersWithViews();
+
+builder.Services.AddEndpointsApiExplorer();
 
 // Add services to the container.
 /*var connectionString = builder.Configuration.GetConnectionString("DefaultConnection") ?? throw new InvalidOperationException("Connection string 'DefaultConnection' not found.");
@@ -23,6 +30,9 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.Requ
 builder.Services.AddControllersWithViews();
 
 builder.Services.AddScoped<ProductoService, ProductoService>();
+
+builder.Services.AddScoped<ContactoService, ContactoService>();
+
 builder.Services.AddScoped<CurrencyExchangeApiIntegration, CurrencyExchangeApiIntegration>();
 
 builder.Services.AddSession(options =>
@@ -69,6 +79,11 @@ app.UseRouting();
 
 app.UseAuthorization();
 app.UseSession();
+
+app.MapPost("/predict",
+    async (PredictionEnginePool<MLModel1.ModelInput, MLModel1.ModelOutput> predictionEnginePool, MLModel1.ModelInput input) =>
+        await Task.FromResult(predictionEnginePool.Predict(input)));
+
 
 app.MapControllerRoute(
     name: "default",
