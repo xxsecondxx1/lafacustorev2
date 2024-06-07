@@ -42,11 +42,23 @@ namespace lafacustorev2.Controllers
         {
             _logger.LogDebug("Ingreso a Enviar Mensaje");
 
-            
+            var modelInput = new MLModel1.ModelInput()
+                {
+                    SentimentText = objcontato.Message
+                };
+
+                var prediction = _predictionEnginePool.Predict(modelInput);
+                var predictionText = "";
+                if(prediction.PredictedLabel==1){
+                    predictionText="Positivo";
+                }else if(prediction.PredictedLabel==0){
+                    predictionText="Negativo";
+                }
+            objcontato.Sentimiento = predictionText;
             _context.Add(objcontato);
             _context.SaveChanges();
 
-            ViewData["Message"] = "Se registro el contacto";
+            ViewData["Message"] = "Se registro el contacto, es un mensaje " +predictionText;
             return View("Index");
         }
         public async Task<IActionResult> VerContactos()
@@ -69,7 +81,7 @@ namespace lafacustorev2.Controllers
                 var prediction = _predictionEnginePool.Predict(modelInput);
                 var predictionText = "";
                 if(prediction.PredictedLabel==1){
-                    predictionText="Mensage Position";
+                    predictionText="Mensage Positivo";
                 }else if(prediction.PredictedLabel==0){
                     predictionText="Mensage Negativo";
                 }
