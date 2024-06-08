@@ -242,6 +242,9 @@ namespace lafacustorev2.Data.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("text");
 
+                    b.Property<string>("Sentimiento")
+                        .HasColumnType("text");
+
                     b.HasKey("Id");
 
                     b.ToTable("t_contacto");

@@ -1,0 +1,51 @@
+@model IEnumerable<lafacustorev2.Controllers.ContactoController.ContactoRecomendation>
+
+@{
+    ViewData["Title"] = "Sentimientos de Contactos";
+}
+
+<h1>Sentimientos de Contactos</h1>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Contacto.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Contacto.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Contacto.Email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Contacto.Message)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.First().Sentimiento)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto.Email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Contacto.Message)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Sentimiento)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
