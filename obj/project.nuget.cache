@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "y20e0szJlo8=",
+  "dgSpecHash": "D5SFXADszrQ=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lap\\Desktop\\u-2024\\progra1\\facu\\lafacustorev2\\lafacustorev2.csproj",
+  "projectFilePath": "C:\\Users\\lap\\Desktop\\u-2024\\progra1\\facul\\lafacustorev2\\lafacustorev2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lap\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\lap\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",
