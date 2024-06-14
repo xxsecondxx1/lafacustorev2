@@ -17,6 +17,9 @@
     <thead>
         <tr>
             <th>
+                Imagen
+            </th>
+            <th>
                 Productos
             </th>
             <th>
@@ -31,6 +34,9 @@
     <tbody>
 @foreach (Proforma item in Model.elementosCarrito) {
         <tr>
+            <td>
+                <img src="@item.Producto.ImageURL" class="img-thumbnail" alt="@item.Producto.Name" style="max-width: 50px; max-height: 50px;">
+            </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Producto.Name)
             </td>
