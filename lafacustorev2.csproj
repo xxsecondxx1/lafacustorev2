@@ -27,5 +27,10 @@
      <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
 
   </ItemGroup>
+  <ItemGroup Label="MLModel1">
+    <None Include="MLModel1.mlnet">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 
 </Project>
